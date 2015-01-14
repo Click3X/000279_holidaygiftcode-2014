@@ -1,0 +1,276 @@
+// IMPORT CHARLES MIXINS
+@import 'charles/mixins.scss';
+
+$icon-font-path: "/vendor/bootstrap-sass-official/assets/fonts/bootstrap/";
+
+@import 'vendor/bootstrap-sass-official/assets/stylesheets/bootstrap.scss';
+
+body,html,ul,li{
+    margin:0;
+    padding:0;
+    overflow: hidden;
+}
+html{ overflow: auto; }
+ul{ list-style: none; }
+li{ display: inline-block; }
+html, body { overflow-x:hidden; }
+body{
+    padding-bottom:140px;
+}
+
+:focus{
+    outline: none;
+}
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+} 
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; /* For IE 6/7 (trigger hasLayout) */ }
+.error{
+    font-family: Georgia, serif;
+    font-style: italic;
+    text-transform: none;
+    margin-top: 18px;
+    display: block;
+    letter-spacing: -.01em;
+    margin-bottom: 20px;
+    color: $red;
+}
+
+a, a:visited{
+    cursor: pointer;
+    text-decoration: none;
+}
+
+body.page-tshirt, body.page-complete{
+    #footer{
+        display: none;
+    }
+}
+
+.disable-hover,
+.disable-hover *{
+    pointer-events: none !important;
+}
+
+hr{
+    margin:0 auto;
+    padding:0;
+    border: 0;
+    border-top: 1px solid $red;
+    max-width: 80%;
+
+    @media (min-width: 640px) {
+        max-width: 580px;
+    }
+}
+
+#page-container{
+    padding:20px 0 0 0;
+    width: 100%;
+    position:relative;
+    z-index: 2;
+
+    .page-content{
+        opacity:0;
+        margin:0 auto;
+        max-width: 1200px;
+
+        @include transition(opacity .2s ease-in-out);
+
+        &.ready{
+            opacity:1;
+        }
+
+        hr{
+            border-top:2px solid $red;
+        }
+    }
+
+    .video-wrapper{
+        max-width: 620px;
+        margin: 0 auto;
+
+        .video-container{
+            width: 100%;
+            padding-bottom:100%;
+            background: #999;
+            height: 0;
+            position: relative;
+
+            .video-player{
+                width: 100%;
+                height: 100%;
+
+                video{
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    z-index: 1;
+                }
+
+                video.mobile-video{
+                    position: absolute;
+                    opacity: 0;
+                    z-index: 3;
+                }
+
+                div.poster{
+                    text-align: center;
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    background-size:cover;
+                    background-position:center center;
+                    background-repeat:no-repeat;
+                    z-index: 2;
+                }
+            }
+        }
+    }
+}
+
+/******************************************************************
+Answer List and Tshirt Slider
+******************************************************************/
+div.question{
+    opacity: 0;
+    display: none;
+
+    &.active{
+        opacity: 1;
+        display: block;
+    }
+}
+
+ul.answer-list{
+    margin:0 0 0 0;
+    padding:0 0 0 0;
+    text-align:center;
+
+    li{
+        padding:0;
+        width: 100%;
+        vertical-align: top;
+        line-height: 0;
+        opacity: 0;
+
+        @include transition(opacity .4s ease-in-out);
+        
+        @media(min-width: 680px) { width:50%; }
+        @media(min-width: 920px) { width:40%; }
+
+        .answer-inner{
+            background-color:white;
+            border:6px solid white;
+            opacity:1;
+
+            @include transition(border .1s ease-in-out);
+        }
+
+        a{
+            display: inline-block;
+            position: relative;
+            height: 0;
+            width: 100%;
+            padding-bottom:80%;
+
+            background-color:#EEE;
+            background-size:cover;
+            background-repeat:no-repeat;
+            background-position:center center;
+
+            @media(min-width: 680px) { padding-bottom:100%; }
+
+            .question-label{
+                position: absolute;
+                left: 0; right: 0;
+                margin-left: auto;
+                margin-right: auto;
+
+                .question-label-inner{ padding:10px; }
+
+                h4{
+                    
+                }
+            }
+        }
+
+        &:hover{
+            .answer-inner{
+                border:6px solid $darkblue;
+            }
+
+            a{
+                .question-label{
+                    h4{
+                        @include prefix(box-shadow, none );
+                    }
+                }
+            }
+        }
+
+        &.active{
+            .answer-inner{
+                border:6px solid $lightblue;
+            }
+
+            a{
+                .question-label{
+                    h4{
+                        @include prefix(box-shadow, none );
+                    }
+                }
+            }
+        }
+    }
+}
+
+body.mobile, body.ipad{
+    ul.answer-list{
+        li{
+            &:hover{
+                .answer-inner{
+                    border:6px solid white;
+                }
+
+                a{
+                    .question-label{
+                        h4{
+                            @include prefix(box-shadow, 6px 6px 0 0 #ffffff );
+                        }
+                    }
+                }
+            }
+
+            &.active{
+                .answer-inner{
+                    border:6px solid $lightblue;
+                }
+            }
+        }
+    }
+}
+
+@import 'charles/loader.scss';
+@import 'charles/header.scss';
+@import 'charles/questions.scss';
+@import 'charles/snow.scss';
+@import 'charles/play-button.scss';
+@import 'charles/tshirt.scss';
+@import 'charles/tshirt-form.scss';
+@import 'charles/header-svg.scss';
+@import 'charles/new-forms.scss';
+@import 'charles/video.scss';
+@import 'charles/animate-header.scss';
+@import 'charles/ie.scss';
