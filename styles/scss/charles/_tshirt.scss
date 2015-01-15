@@ -23,14 +23,14 @@ div.slider-nav-dots-holder {
         }
 
         .slider-nav-dot.active{
-            background-color:$dotblue;
+            background-color:$clickred;
         }
     }
 }
 
 .name {
 	font-family: "proxima-nova-alt-ext-cond",sans-serif;
-	color:$darkblue;
+	color:#666;
 	text-transform: uppercase;
     font-weight: 800;
     text-align: center;
@@ -94,15 +94,15 @@ ul.slider-nav-arrows {
             display: block;
             color:transparent;
             background-color: #f2f0f2;
-            background-image:url('../../images/ui/blue-arrow.svg');
+            background-image:url('../../images/ui/red-arrow.svg');
             background-repeat: no-repeat;
-            background-position: 100% 50%;
+            background-position: 50% 70%;
             background-size:30px 30px;
             width:40px; 
             height:50px;
 
             @media(min-width: 640px) { 
-            	background-position: 80% 50%;
+            	background-position: 50% 80%;
                 background-size:40px 40px;
                 width:58px; 
                 height:60px;
@@ -116,7 +116,7 @@ ul.slider-nav-arrows {
         border-bottom-right-radius:50%;
 
         a{
-            @include prefix(transform, rotate(180deg));
+            @include prefix(transform, rotate(90deg));
         }
     }
 
@@ -124,6 +124,10 @@ ul.slider-nav-arrows {
         float: right;
         border-top-left-radius:50%;
         border-bottom-left-radius:50%;
+
+        a {
+            @include prefix(transform, rotate(-90deg));
+        }
     }
 }
 

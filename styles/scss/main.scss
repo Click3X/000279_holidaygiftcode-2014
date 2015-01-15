@@ -96,48 +96,6 @@ hr{
             border-top:2px solid $red;
         }
     }
-
-    .video-wrapper{
-        max-width: 620px;
-        margin: 0 auto;
-
-        .video-container{
-            width: 100%;
-            padding-bottom:100%;
-            background: #999;
-            height: 0;
-            position: relative;
-
-            .video-player{
-                width: 100%;
-                height: 100%;
-
-                video{
-                    width: 100%;
-                    height: 100%;
-                    position: absolute;
-                    z-index: 1;
-                }
-
-                video.mobile-video{
-                    position: absolute;
-                    opacity: 0;
-                    z-index: 3;
-                }
-
-                div.poster{
-                    text-align: center;
-                    width: 100%;
-                    height: 100%;
-                    position: absolute;
-                    background-size:cover;
-                    background-position:center center;
-                    background-repeat:no-repeat;
-                    z-index: 2;
-                }
-            }
-        }
-    }
 }
 
 /******************************************************************
@@ -265,12 +223,8 @@ body.mobile, body.ipad{
 @import 'charles/loader.scss';
 @import 'charles/header.scss';
 @import 'charles/questions.scss';
-@import 'charles/snow.scss';
-@import 'charles/play-button.scss';
 @import 'charles/tshirt.scss';
 @import 'charles/tshirt-form.scss';
-@import 'charles/header-svg.scss';
 @import 'charles/new-forms.scss';
 @import 'charles/video.scss';
-@import 'charles/animate-header.scss';
 @import 'charles/ie.scss';

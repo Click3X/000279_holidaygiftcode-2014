@@ -39,29 +39,17 @@
 
         <!-- HEADER -->
         <div id="header-container" class="header-container clearfix">   
-            <!-- ANIMATED SNOW -->
-            <div class="snow-container">
-                <div class="snow foreground"></div>
-                <div class="snow foreground layered"></div>
-                <div class="snow middleground"></div>
-                <div class="snow middleground layered"></div>
-                <div class="snow background"></div>
-                <div class="snow background layered"></div>
-            </div>
-
-            <!-- NEW SVGS -->
-            <div class="demo bg"></div>
-            <div class="svg-holder clearfix">
-                <div class="new-header bg"></div>
-                <?php $this->load->view("header_svg_view"); ?>
-            </div>
+            <div class="logo-container"></div>
         </div>
 
         <!-- PAGE CONTAINER -->
         <div id="page-container"></div>
 
+
         <!-- FOOTER -->
         <div id="footer" class="footer clearfix">
+            <h1>Select &amp; order<br />
+            your holiday T-shirt today!</h1>
             <div class="footer-inner">
                 <hr>
                 <div class="gift-icon"></div>
@@ -74,7 +62,6 @@
                         <input type="submit" class="form-btn" value="submit" />
                     </div>
                 </form>
-                <div class="credits"><a href="http://ablebaker-nyc.com" target="_blank"><p>original music by</p><img class="logo" src="<?= base_url(); ?>images/ui/ablebaker_logo.jpg" width="200" /></a></div>
             </div>
         </div>
 

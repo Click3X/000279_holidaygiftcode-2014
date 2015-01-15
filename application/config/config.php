@@ -15,8 +15,8 @@
 |
 */
 $config['base_url']	= '';
-$config['root_directory'] = '2014';
-$config['encoder_url'] =  'encoder/combine';
+$config['root_directory'] = 'giftcode';
+$config['encoder_url'] =  'giftcode/encoder/combine';
 
 /*
 |--------------------------------------------------------------------------

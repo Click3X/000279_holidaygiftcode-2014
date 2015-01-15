@@ -10,7 +10,7 @@
 		<h1 id="title-message">Your T-shirt is on its way!</h1>
 
 		<div class="start-over-holder">
-	        <a class="form-btn start-over-btn" data-navigate-to="home">Create a video</a>
+	        <a class="form-btn start-over-btn" data-navigate-to="home">Home</a>
 	    </div>
 	</section>
 </div>

@@ -71,11 +71,11 @@ input[type=radio] {
 	display: inline-block;
 
 	input[type=radio] + label {
-		&:hover { background-color: $darkblue; }
+		&:hover { background-color: $darkred; }
 	}
 
 	input[type=radio]:checked + label {
-		background-color: $btn-blue;
+		background-color: $clickred;
 	}
 }
 
@@ -89,7 +89,7 @@ input[type=radio] {
 		text-transform: capitalize;
 
 		font-weight:300;
-		color:$darkblue;
+		color:$darkgrey;
 	    margin:.75em 0 .25em;
 	    font-size: 1.2em;
 
@@ -115,8 +115,8 @@ input[type=radio] {
 		@media(min-width: 600px) { font-size: 1.4em; line-height: 3.8em; height: 3.8em; }
 
 		&:focus, &:active{
-			border-color:$blue;
-			color: $blue;
+			border-color:$darkgrey;
+			color: $darkgrey;
 		}
 
 		&.error{
@@ -161,13 +161,13 @@ input[type=radio] {
 
 input[type=submit] { 
 	font-weight: 600;
-	background-color:$submitblue;
+	background-color:$clickred;
 	margin:20px auto 20px auto;
 	padding:0 2em;
 
 	@include prefix(transition, all 200ms);
 
 	&:hover {
-		background-color: $darkblue;
+		background-color: $darkred;
 	}
 }
