@@ -13,6 +13,7 @@ class Order_Model extends C3X_Model
     		'size' 						=> array("shown"=>true, 	"label"=>"Size"),
     		'ref_client_id' 			=> array("shown"=>true, 	"label"=>"Client ID"),
     		'status'					=> array("shown"=>true, 	"label"=>"Status"),
+            'name'                      => array("shown"=>true,     "label"=>"Name"),
             'address'                   => array("shown"=>true,     "label"=>"Address"),
             'state'                     => array("shown"=>true,     "label"=>"State"),
             'city'                      => array("shown"=>true,     "label"=>"City"),

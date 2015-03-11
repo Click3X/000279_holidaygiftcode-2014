@@ -25,7 +25,8 @@ require.config({
         routes:     'scripts/routes',
         pages:      'scripts/pages',
         modules:    'scripts/modules',
-        models:     'scripts/models'
+        models:     'scripts/models',
+        drawsvg:    'scripts/drawfillsvg'
     }
 });
 

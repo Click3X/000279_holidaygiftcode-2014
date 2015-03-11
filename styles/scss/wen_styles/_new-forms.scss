@@ -1,0 +1,156 @@
+// NEW FORMS
+.gift-code-form {
+    text-align: center;
+
+    input[type="submit"]{
+        display: block;
+    }
+
+    input[type="submit"]:-ms-input-placeholder {  
+       color: $clickred;
+       font-family: 'gotham-bold';
+       font-weight: 500;  
+       font-size: 38px;
+       opacity: 1 !important;
+
+        @media (max-width: 665px) {
+          font-size: 30px;
+        }
+
+        @media (max-width: 530px) {
+          font-size: 22px;
+
+        }
+
+        @media (max-width: 399px) {
+          font-size: 18px;
+        }
+    }
+    
+    input[type="text"]{
+       font-family: 'gotham-bold';
+       font-weight: 500;
+       font-size: 38px;
+        text-align: center;
+        color:$darkgrey;
+        text-transform: uppercase;
+        width:80%;
+        display: inline-block;
+        margin:70px auto;
+        border: none;
+        
+
+        @media (max-width: 665px) {
+          font-size: 32px;
+        }
+
+        @media (max-width: 530px) {
+          font-size: 28px;
+          margin: 50px auto;
+          width:90%;
+        }
+    }
+}
+
+::-webkit-input-placeholder {
+    color: $clickred;
+    font-family: 'gotham-bold';
+    font-weight: 500;
+    font-size: 38px;
+    opacity: 1 !important;
+
+    @media (max-width: 665px) {
+      font-size: 30px;
+    }
+
+    @media (max-width: 530px) {
+      font-size: 22px;
+    }
+
+    @media (max-width: 399px) {
+      font-size: 18px;
+    }
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: $clickred;  
+   font-family: 'gotham-bold';
+   font-weight: 500;
+   font-size: 38px;
+   opacity: 1 !important;
+
+    @media (max-width: 665px) {
+      font-size: 30px;
+    }
+
+    @media (max-width: 530px) {
+      font-size: 22px;
+    }
+
+    @media (max-width: 399px) {
+      font-size: 18px;
+    }
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: $clickred;
+   font-family: 'gotham-bold';
+   font-weight: 500;  
+   font-size: 38px;
+   opacity: 1 !important;
+
+
+    @media (max-width: 665px) {
+      font-size: 30px;
+    }
+
+    @media (max-width: 530px) {
+      font-size: 22px;
+    }
+
+    @media (max-width: 399px) {
+      font-size: 18px;
+    }
+}
+
+:-ms-input-placeholder {  
+   color: $clickred;
+   font-family: 'gotham-bold';
+   font-weight: 500;  
+   font-size: 38px;
+   opacity: 1 !important;
+
+
+    @media (max-width: 665px) {
+      font-size: 30px;
+    }
+
+    @media (max-width: 530px) {
+      font-size: 22px;
+    }
+
+    @media (max-width: 399px) {
+      font-size: 18px;
+    }
+}
+
+
+[placeholder]:focus::-webkit-input-placeholder {
+  transition: opacity 0.1s 0.1s ease; 
+  opacity: 0 !important;
+}
+
+[placeholder]:focus::-moz-placeholder {
+  transition: opacity 0.1s 0.1s ease; 
+  opacity: 0 !important;
+}
+
+// [placeholder]:focus:::-moz-placeholder {
+//   transition: opacity 0.1s 0.1s ease; 
+//   opacity: 0 !important;
+// }
+
+[placeholder]:focus::-ms-input-placeholder {
+  transition: opacity 0.1s 0.1s ease; 
+  opacity: 0 !important;
+}

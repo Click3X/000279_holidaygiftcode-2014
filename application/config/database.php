@@ -49,9 +49,9 @@ $active_group = 'default';
 $active_record = TRUE;
 
 $db['default']['hostname'] = 'localhost';
-$db['default']['username'] = 'holidaycard-2014';
-$db['default']['password'] = 'holidaycard-2014';
-$db['default']['database'] = 'holidaycard-2014';
+$db['default']['username'] = 'clicktshirts';
+$db['default']['password'] = 'clicktshirts';
+$db['default']['database'] = 'clicktshirts-sxsw2015';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;

@@ -1,0 +1,153 @@
+.header-container {
+    position: relative;
+    width:100%;
+    text-align: center;
+    background-color: #ee2a24;
+    padding: 60px 0;
+}
+
+.home-link {
+    color: #fff;
+    text-decoration: none;
+    &:hover, &:focus {
+        text-decoration: none;
+        color: #fff;
+    }
+
+    outline: none !important;
+
+}
+
+// FOOTER 
+.footer {
+    position:relative;
+    z-index: 2;
+    text-align: center;
+
+    input,input[type=submit]{
+        margin:0;
+        padding:0;
+    }
+
+    p {
+        text-align: center;
+        text-transform: uppercase;
+        color: $darkgrey;
+        font-weight: 600;
+        font-family: "proxima-nova-alt-ext-cond",sans-serif;
+        letter-spacing: 0.06em;
+        margin:0;
+        font-size: 1.5em;
+        line-height: 1.3em;
+
+        @media(min-width: 481px) {
+            font-size: 1.9em;
+            line-height: 1.2em;
+        }
+
+        .serif-italic {
+            font-family: Georgia, serif;
+            font-style: italic;
+            text-transform: lowercase;
+            font-weight: 700;
+            height: 0;
+            font-size: .8em;
+        }
+    }
+}
+
+
+.red { color:$red; }
+
+
+section.module h2 {
+  color: #ee2a24;
+  text-transform: uppercase;
+  margin: 50px;
+  font-family: "gotham-bold", serif;
+  font-size: 5em;
+line-height: 1em;
+font-weight: 400;
+
+}
+section.module p {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 35px;
+}
+
+section.module h3 {
+  font-family: "gotham-bold", serif;
+  font-size: 25px;
+  margin-bottom: 0;
+  line-height: 35px;
+  font-weight: 500;
+}
+
+.sub-title {
+  font-family: "gotham-bold", serif;
+  font-size: 1.7em;
+  color: #ee2a24;
+  margin: 0 0 30px 50px;
+  display: block;
+}
+
+section.module.content {
+  padding: 0;
+}
+
+section.module.parallax {
+  height: 700px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+section.module.parallax h1 {
+  font-family: "gotham-bold", serif;
+  color: #fff;
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+section.module.parallax-2 {
+  background-image: url("../../images/home/background.jpg");
+}
+
+.sxsw-logo {
+    background: url("../../images/home/sxsw-interactive-logo.png") center center no-repeat;
+    background-size: 300px 120px;
+    width: 300px;
+    height: 120px;
+    margin: 70px auto;
+}
+
+ @-webkit-keyframes super-rainbow {
+    0% { background: #68c7c7; }   
+    20% { background: #4ab969; }
+    40% { background: #00a8e2; }
+    60% { background: #f37c47; }
+    80% { background: #a09f9f; }
+    100% { background: #68c7c7; }
+}
+
+@-moz-keyframes super-rainbow {
+    0% { background: #68c7c7; }   
+    20% { background: #4ab969; }
+    40% { background: #00a8e2; }
+    60% { background: #f37c47; }
+    80% { background: #a09f9f; }
+    100% { background: #68c7c7; }
+}
+
+#footer {
+    -webkit-animation: super-rainbow 8s infinite linear;
+    -moz-animation: super-rainbow 8s infinite linear;
+    background: #68c7c7;
+}

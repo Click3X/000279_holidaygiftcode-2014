@@ -18,20 +18,29 @@ class Clients extends CI_Controller {
 	public function code(){
 		$post = $this->input->post();
 
-		$client = $this->client_model->get( array("gift_code"=>$post["code"]) );
+		$client = $this->client_model->get( array("gift_code"=>$post["code"], "limit"=>10000000 ) );
 		$response = array();
+
+
 
 		if( !empty($client) && count($client) > 0 ){
 			$client = $client[0];
 
+			// // TEST CODE
+			// if ($client === '1234' ) {
+			// 	$response = array("success"=>true, "data"=>$client);
+			// }
+
 			$this->load->model("order_model");
 			$already_ordered = $this->order_model->get( array("ref_client_id"=>intval($client->id), "count"=>true) );
 
-			if( $already_ordered && $already_ordered > 0 ){
-				$response = array("error"=>"Sorry, that gift code has already been used.");
-			}else{
+			// if( $already_ordered && $already_ordered > 0 ){
+			// 	$response = array("error"=>"Sorry, that gift code has already been used.");
+			// }else{
 				$response = array("success"=>true, "data"=>$client);
-			}
+			// }
+
+			
 		}else{
 			$response = array("error"=>"Sorry, that's not a valid gift code.");
 		}

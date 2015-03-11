@@ -91,22 +91,22 @@ function openpopup(url, title, w, h){
 }
 
 /*--------disable pointer events on scroll----------------*/
-window.addEventListener('scroll', function() {
-    clearTimeout(scrolltimer);
+// window.addEventListener('scroll', function() {
+//     clearTimeout(scrolltimer);
 
-    if(body.className.indexOf('disable-hover') == -1) {
-        body.className += ' disable-hover';
-    }
+//     if(body.className.indexOf('disable-hover') == -1) {
+//         body.className += ' disable-hover';
+//     }
 
-    scrolltimer = setTimeout(function(){
-        var classes = body.className.split(" ");
-        for(var i = 0; i<classes.length; i++){
-            if( classes[i] == 'disable-hover' )
-                classes.splice(i,1);
-        }
-        body.className = classes.join(" ");
-    },200);
-}, false);
+//     scrolltimer = setTimeout(function(){
+//         var classes = body.className.split(" ");
+//         for(var i = 0; i<classes.length; i++){
+//             if( classes[i] == 'disable-hover' )
+//                 classes.splice(i,1);
+//         }
+//         body.className = classes.join(" ");
+//     },200);
+// }, false);
   
 
 setbodytags();

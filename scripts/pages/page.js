@@ -25,15 +25,16 @@ define([
             
             _t.collection.push( _t.model );
 
-            console.log(_t.page_content);
+            // console.log(_t.page_content);
         },
         render: function () {
             var _t = this;
 
+
             this.append();
 
             this.model.set("page_content_el", this.$el.find(".page-content").eq(0) );
-            this.model.set("page_loader_el", this.$el.find(".spinner").eq(0) );
+            // this.model.set("page_loader_el", this.$el.find(".spinner").eq(0) );
 
             //---------Page Navigation-----------//
             this.$el.find("a[data-navigate-to]").unbind("click").click(function(){
@@ -49,24 +50,25 @@ define([
             //override
         },
         ready:function(){
-            console.log("ready");
+            // console.log("ready");
 
-            this.model.get("page_content_el").addClass("ready");
-            this.model.get("page_loader_el").remove();
+            // this.model.get("page_content_el").addClass("ready");
+            // this.model.get("page_loader_el").remove();
         },
         showfooter:function(){
-            if( !$("#footer").hasClass("ready") ) $("#footer").addClass("ready");
+            // if( !$("#footer").hasClass("ready") ) $("#footer").addClass("ready");
         },
         remove:function(){
-            this.$el.find("a[data-navigate-to]").unbind("click");
+            // this.$el.find("a[data-navigate-to]").unbind("click");
 
-            $("#footer").removeClass("ready");
-            this.deactivate();
+            // $("#footer").removeClass("ready");
+            // this.deactivate();
         },
         deactivate:function(){
             //override
         }
     });
+
 
     return Page;
 });

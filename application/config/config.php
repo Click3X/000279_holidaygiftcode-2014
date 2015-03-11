@@ -15,8 +15,8 @@
 |
 */
 $config['base_url']	= '';
-$config['root_directory'] = 'giftcode';
-$config['encoder_url'] =  'giftcode/encoder/combine';
+$config['root_directory'] = 'wearme';
+$config['encoder_url'] =  'wearme/encoder/combine';
 
 /*
 |--------------------------------------------------------------------------

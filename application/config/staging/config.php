@@ -15,8 +15,8 @@
 |
 */
 $config['base_url']	= '';
-$config['root_directory'] = '';
-$config['encoder_url'] =  "http://www.click3x.com/giftcode/encoder/combine";
+$config['root_directory'] = 'clicktshirts';
+$config['encoder_url'] =  "http://www.click3x.com/clicktshirts/encoder/combine";
 
 /*
 |--------------------------------------------------------------------------

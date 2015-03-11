@@ -1,22 +1,49 @@
-// IMPORT CHARLES MIXINS
-@import 'charles/mixins.scss';
+// IMPORT WEN MIXINS
+@import 'wen_styles/mixins.scss';
 
 $icon-font-path: "/vendor/bootstrap-sass-official/assets/fonts/bootstrap/";
 
 @import 'vendor/bootstrap-sass-official/assets/stylesheets/bootstrap.scss';
 
+/* ============================================================
+  FONTS
+============================================================ */
+@font-face {
+    font-family: "gotham-light";
+    src: url('../fonts/gotham-light.eot');
+    src: url('../fonts/gotham-light.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/gotham-light.woff') format('woff'),
+         url('../fonts/gotham-light.ttf') format('truetype'),
+         url('../fonts/gotham-light.svg#gothamLight') format('svg');
+}
+@font-face {
+    font-family: "gotham-book";
+    src: url('../fonts/gotham-book.eot');
+    src: url('../fonts/gotham-book.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/gotham-book.woff') format('woff'),
+         url('../fonts/gotham-book.ttf') format('truetype'),
+         url('../fonts/gotham-book.svg#gothamBook') format('svg');
+}
+@font-face {
+    font-family: "gotham-bold";
+    src: url('../fonts/gotham-bold.eot');
+    src: url('../fonts/gotham-bold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/gotham-bold.woff') format('woff'),
+         url('../fonts/gotham-bold.ttf') format('truetype'),
+         url('../fonts/gotham-bold.svg#gothamBold') format('svg');
+}
+
 body,html,ul,li{
     margin:0;
     padding:0;
     overflow: hidden;
+    font-family: "gotham-light", serif;
+    font-size: 20px;
 }
 html{ overflow: auto; }
 ul{ list-style: none; }
 li{ display: inline-block; }
 html, body { overflow-x:hidden; }
-body{
-    padding-bottom:140px;
-}
 
 :focus{
     outline: none;
@@ -37,14 +64,21 @@ body{
 .clearfix:after { clear: both; }
 .clearfix { zoom: 1; /* For IE 6/7 (trigger hasLayout) */ }
 .error{
-    font-family: Georgia, serif;
+    // font-family: Georgia, serif;
+    font-family: 'gotham-light';
     font-style: italic;
     text-transform: none;
-    margin-top: 18px;
+    margin-top: -22px;
     display: block;
-    letter-spacing: -.01em;
-    margin-bottom: 20px;
-    color: $red;
+    // letter-spacing: -.01em;
+    margin-bottom: 15px;
+    color: $clickred;
+}
+
+#order-form .error {
+    color: #fff;
+    margin-top: 20px;
+    margin-bottom: 0px;
 }
 
 a, a:visited{
@@ -53,7 +87,7 @@ a, a:visited{
 }
 
 body.page-tshirt, body.page-complete{
-    #footer{
+    #footer, #header-container, .parallax-2, .gift-code-form {
         display: none;
     }
 }
@@ -76,15 +110,15 @@ hr{
 }
 
 #page-container{
-    padding:20px 0 0 0;
+    padding:0 0 0 0;
     width: 100%;
     position:relative;
     z-index: 2;
 
     .page-content{
-        opacity:0;
+        opacity:1;
         margin:0 auto;
-        max-width: 1200px;
+        // max-width: 1200px;
 
         @include transition(opacity .2s ease-in-out);
 
@@ -220,11 +254,11 @@ body.mobile, body.ipad{
     }
 }
 
-@import 'charles/loader.scss';
-@import 'charles/header.scss';
-@import 'charles/questions.scss';
-@import 'charles/tshirt.scss';
-@import 'charles/tshirt-form.scss';
-@import 'charles/new-forms.scss';
-@import 'charles/video.scss';
-@import 'charles/ie.scss';
+@import 'wen_styles/loader.scss';
+@import 'wen_styles/header.scss';
+@import 'wen_styles/questions.scss';
+@import 'wen_styles/tshirt.scss';
+@import 'wen_styles/tshirt-form.scss';
+@import 'wen_styles/new-forms.scss';
+@import 'wen_styles/video.scss';
+@import 'wen_styles/ie.scss';
